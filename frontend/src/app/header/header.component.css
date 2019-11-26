@@ -1,0 +1,13 @@
+.navbar{
+    justify-content: space-between;
+}
+.navbarButtons{
+    margin-right:40%;
+}
+.navbarButtons button{
+    padding-right: 1rem;
+}
+mat-search-bar{
+    font-size: 14px;
+    margin-right:2%;
+}
