@@ -5,3 +5,15 @@
     </div>
     <mat-search-bar (onEnter)="onSearch($event)"></mat-search-bar>
 </mat-toolbar>
+<mat-sidenav-container class="menu-lateral">
+  <mat-sidenav opened mode="side">
+    <mat-nav-list>
+        <a mat-list-item href="#">RPG</a>
+        <a mat-list-item href="#">Luta</a>
+        <a mat-list-item href="#">Esporte</a>
+        <a mat-list-item href="#">Plataforma</a>
+        <a mat-list-item href="#">Tiro</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

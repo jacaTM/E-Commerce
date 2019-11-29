@@ -11,3 +11,13 @@ mat-search-bar{
     font-size: 14px;
     margin-right:2%;
 }
+.menu-lateral{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 60px;
+    bottom: 0;
+}
+mat-nav-list{
+    margin-top:100%;
+}

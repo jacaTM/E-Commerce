@@ -8,7 +8,9 @@ import { PrincipalComponent } from './principal/principal.component';
 import { HeaderComponent } from './header/header.component';
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 import {MatButtonModule} from '@angular/material/button'; 
-import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';   
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     NgMatSearchBarModule,
     MatToolbarModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
