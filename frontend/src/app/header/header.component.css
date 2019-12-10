@@ -1,23 +1,78 @@
-.navbar{
-    justify-content: space-between;
+/* HEADER */
+.header {
+  background-color: rgb(255,255,255);
 }
-.navbarButtons{
-    margin-right:40%;
+
+.logo {
+  width: 7rem;
+  height: 7rem;
 }
-.navbarButtons button{
-    padding-right: 1rem;
+
+.input-group {
+  width: 80%;
 }
-mat-search-bar{
-    font-size: 14px;
-    margin-right:2%;
+
+.form-control {
+  font-size: 1rem;
+  color: #52AACA !important;
 }
-.menu-lateral{
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 60px;
-    bottom: 0;
+
+.list-group-item {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #52AACA !important;
 }
-mat-nav-list{
-    margin-top:100%;
+
+/* NAVBAR */
+.clientMenu a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black !important;
+}
+
+.clientMenu {
+  transition: 1s;
+}
+
+.clientMenu:hover:nth-child(1) {
+  background-color: rgb(0, 0, 255);
+}
+
+.clientMenu:hover:nth-child(2) {
+  background-color: rgb(0,255,0);
+}
+
+.clientMenu:hover:nth-child(3) {
+  background-color: rgb(255, 0, 0);
+}
+
+.clientMenu:hover:nth-child(4) {
+  background-color: rgb(255, 255, 0);
+}
+
+
+.navbar {
+  padding-bottom: 0.1%;
+}
+
+.icones {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .nome {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .search {
+    margin: 2rem;
+  }
+
+  .nome {
+    margin-bottom: 2rem;
+  }
 }

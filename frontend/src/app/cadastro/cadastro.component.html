@@ -1,0 +1,82 @@
+<div class="container p-3 d-flex justify-content-center" [@animate]="currentState">
+        <div class="card p-3">
+          <div class="body">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+      
+              <div class="row">
+                <div class="col">
+                  <h1>Cadastro</h1>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="form-group col">
+                  <label>Nome Completo</label>
+                  <input type="text" class="form-control" formControlName="nome"
+                    [ngClass]="{ 'is-invalid': submitted && form.nome.errors }">
+                  <div *ngIf="submitted && form.nome.errors" class="invalid-feedback">
+                    <div *ngIf="form.nome.errors.required">O nome é obrigatório</div>
+                  </div>
+                </div>
+                <div class="form-group col">
+                  <label>Email</label>
+                  <input type="email" class="form-control" formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && form.email.errors }">
+                  <div *ngIf="submitted && form.email.errors" class="invalid-feedback">
+                    <div *ngIf="form.email.errors.required">O email é obrigatório</div>
+                    <div *ngIf="form.email.errors.invalid">Email já cadastrado</div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="form-group col">
+                  <label>Senha</label>
+                  <input type="password" class="form-control" formControlName="senha"
+                    [ngClass]="{ 'is-invalid': submitted && form.senha.errors }">
+                  <div *ngIf="submitted && form.senha.errors" class="invalid-feedback">
+                    <div *ngIf="form.senha.errors.required">A senha é obrigatória</div>
+                    <div *ngIf="form.senha.errors.minlength">A senha deve ter no mínimo 6 caracteres</div>
+                  </div>
+                </div>
+                <div class="form-group col">
+                  <label>Confirme sua senha</label>
+                  <input type="password" class="form-control" formControlName="senhaConfirma"
+                    [ngClass]="{ 'is-invalid': submitted && form.senhaConfirma.errors }">
+                  <div *ngIf="submitted && form.senhaConfirma.errors" class="invalid-feedback">
+                    <div *ngIf="form.senhaConfirma.errors.required">A confirmação de senha é obrigatória</div>
+                    <div *ngIf="form.senhaConfirma.errors.mustMatch">As senhas devem ser iguais</div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="form-group col">
+                  <label>Telefone celular</label>
+                  <input mask="(00) 00000-0000" [showMaskTyped]="true" [clearIfNotMatch]="true" class="form-control"
+                    formControlName="telefone" [ngClass]="{ 'is-invalid': submitted && form.telefone.errors }">
+                  <div *ngIf="submitted && form.telefone.errors" class="invalid-feedback">
+                    <div *ngIf="form.telefone.errors.required">O telefone é obrigatório</div>
+                  </div>
+                </div>
+                <div class="form-group col">
+                  <label>Endereço</label>
+                  <input type="text" class="form-control" formControlName="endereco"
+                    [ngClass]="{ 'is-invalid': submitted && form.endereco.errors }">
+                  <div *ngIf="submitted && form.endereco.errors" class="invalid-feedback">
+                    <div *ngIf="form.endereco.errors.required">O endereço é obrigatório</div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="col">
+                  <button class="btn btn-dark">Criar Cadastro</button>
+                </div>
+              </div>
+      
+            </form>
+          </div>
+        </div>
+      </div>
+      

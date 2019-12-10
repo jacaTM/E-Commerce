@@ -2,3 +2,16 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+.container {
+    width: 70%;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 1s;
+}
+
+span {
+    font-size: 1.1rem;
+}

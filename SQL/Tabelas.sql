@@ -6,16 +6,19 @@ CREATE TABLE `ecommerce`.`Usuarios` (
   `nome` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `telefone` VARCHAR(45) NOT NULL,
-  `endereco` VARCHAR(100) NOT NULL,
   `senha` VARCHAR(45) NOT NULL,
+  `endereco` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`));
 
 CREATE TABLE `ecommerce`.`Produtos` (
   `id` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
-  `descricao` VARCHAR(45) NOT NULL,
+  `descricao` VARCHAR(2000) NOT NULL,
+  `plataforma`VARCHAR(45) NOT NULL,
+  `estilo`VARCHAR(45) NOT NULL,
   `preco` DECIMAL(10,2) NOT NULL,
   `quantidade` INT NULL,
+  `imagem` blob,
   PRIMARY KEY (`id`));
 
 CREATE TABLE `ecommerce`.`Vendas` (

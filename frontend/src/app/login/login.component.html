@@ -1,0 +1,51 @@
+<div class="container p-3 d-flex justify-content-center" [@animate]="currentState">
+        <div class="card p-3">
+          <div class="body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+              <div class="row">
+                <div class="col-12">
+                  <h1>Login</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col">
+                  <label>Email</label>
+                  <input type="email" class="form-control" formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && form.email.errors }">
+                  <div *ngIf="submitted && form.email.errors" class="invalid-feedback">
+                    <div *ngIf="form.email.errors.required">O email é obrigatório</div>
+                    <div *ngIf="form.email.errors.invalid">Email ou senha incorretos</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col">
+                  <label>Senha</label>
+                  <input type="password" class="form-control" formControlName="senha"
+                    [ngClass]="{ 'is-invalid': submitted && form.senha.errors }">
+                  <div *ngIf="submitted && form.senha.errors" class="invalid-feedback">
+                    <div *ngIf="form.senha.errors.required">A senha é obrigatória</div>
+                  </div>
+                  <div *ngIf="submitted && form.senha.errors" class="invalid-feedback">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="check" formControlName="remember_me">
+                    <label class="custom-control-label" for="check">Lembrar-me</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <button class="btn">Entrar</button>
+                </div>
+              </div>
+            </form>
+      
+          </div>
+        </div>
+      </div>
+      

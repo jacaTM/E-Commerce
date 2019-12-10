@@ -3,10 +3,13 @@ var sql = require('./db.js');
 
 //Produtos object constructor
 var Produtos = function(Produtos){
+    this.id = Produtos.id;
     this.nome = Produtos.nome;
     this.descricao = Produtos.descricao;
+    this.plataforma = Produtos.plataforma;
     this.preco = Produtos.preco;
     this.quantidade = Produtos.quantidade;
+    this.imagem = Produtos.imagem;
 };
 Produtos.createProdutos = function (newProdutos, result) {    
         sql.query("INSERT INTO Produtos set ?", newProdutos, function (err, res) {

@@ -6,8 +6,8 @@ var Usuario = function(Usuario){
     this.nome = Usuario.nome;
     this.email = Usuario.email;
     this.telefone = Usuario.telefone;
-    this.endereco = Usuario.endereco;
     this.senha = Usuario.senha;
+    this.endereco = Usuario.endereco;
 };
 Usuario.createUsuario = function (newUsuario, result) {    
         sql.query("INSERT INTO Usuarios set ?", newUsuario, function (err, res) {

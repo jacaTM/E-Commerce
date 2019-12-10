@@ -31,4 +31,20 @@ module.exports = function(app) {
         .get(Venda.read_a_Venda)
         .put(Venda.update_a_Venda)
         .delete(Venda.delete_a_Venda);
+
+    app.route('/usuario/produto/:usuarioId')
+        .get(product.readUserProduct);
+    app.route('/produto/plataforma/:plataforma')
+        .get(product.readPlataformaProdutos);
+    app.route('/busca/produto/:produtoNome')
+        .get(product.readProductName);
+    app.route('/busca/usuario/:usuarioNome')
+        .get(user.readUserName);
+    app.route('/plataforma')
+        .get(product.readCategories);
+    app.route('/login')
+        .post(user.findUser);
+
+    app.route('/salvarCompra')
+        .post(user.savePurchase)
 };
