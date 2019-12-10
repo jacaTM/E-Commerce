@@ -61,6 +61,17 @@ Produtos.updateById = function(id, Produtos, result){
                 }
             }); 
 };
+Produtos.getByPlataforma = function(plataforma, result){
+    sql.query("SELECT * FROM Produtos WHERE plataforma = ?", plataforma, function(err, res){
+        if(err){
+            console.log("error: ", err);
+            result(null, err);
+        }else{
+            result(null, res);
+      
+        }
+    });
+};
 Produtos.remove = function(id, result){
      sql.query("DELETE FROM Produtos WHERE id = ?", [id], function (err, res) {
 

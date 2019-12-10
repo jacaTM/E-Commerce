@@ -43,6 +43,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     ReactiveFormsModule,
     MatListModule,
     NgxPaginationModule,
+    HttpClientModule,
     NgxMaskModule.forRoot({ validation: true })
   ],
   providers: [],

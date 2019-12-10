@@ -44,6 +44,13 @@ exports.read_a_Produtos = function(req, res) {
   });
 };
 
+exports.get_by_plataforma = function(req,res){
+  Produtos.getByPlataforma(req.params.plataforma, function(err, Produtos){
+    if (err)
+      res.send(err);
+    res.json(Produtos);
+  });
+};
 
 exports.update_a_Produtos = function(req, res) {
   Produtos.updateById(req.params.id, new Produtos(req.body), function(err, Produtos) {

@@ -4,5 +4,6 @@ export class User {
     senha: string;
     email: string;
     telefone: number;
-    endereco: string
+    endereco: string;
+    admin: boolean;
 }

@@ -32,11 +32,11 @@ module.exports = function(app) {
         .put(Venda.update_a_Venda)
         .delete(Venda.delete_a_Venda);
 
-    app.route('/usuario/produto/:usuarioId')
-        .get(product.readUserProduct);
+    /*app.route('/usuario/produto/:usuarioId')
+        .get(product.readUserProduct);*/
     app.route('/produto/plataforma/:plataforma')
-        .get(product.readPlataformaProdutos);
-    app.route('/busca/produto/:produtoNome')
+        .get(Produtos.get_by_plataforma);
+    /*app.route('/busca/produto/:produtoNome')
         .get(product.readProductName);
     app.route('/busca/usuario/:usuarioNome')
         .get(user.readUserName);
@@ -46,5 +46,5 @@ module.exports = function(app) {
         .post(user.findUser);
 
     app.route('/salvarCompra')
-        .post(user.savePurchase)
+        .post(user.savePurchase)*/
 };

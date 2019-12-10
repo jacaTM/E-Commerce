@@ -1,7 +1,7 @@
-<div class="container p-3 d-flex justify-content-center" [@animate]="currentState">
+<div class="container p-3 d-flex justify-content-center">
         <div class="card p-3">
           <div class="body">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="col-12">
                   <h1>Login</h1>
@@ -33,14 +33,14 @@
               <div class="row">
                 <div class="col">
                   <div class="form-group custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="check" formControlName="remember_me">
+                    <input type="checkbox" class="custom-control-input" id="check">
                     <label class="custom-control-label" for="check">Lembrar-me</label>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-4">
-                  <button class="btn">Entrar</button>
+                  <button class="btn" type="submit">Entrar</button>
                 </div>
               </div>
             </form>

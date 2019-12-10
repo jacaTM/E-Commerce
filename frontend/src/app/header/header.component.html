@@ -7,8 +7,8 @@
           </a>
         </div>
         
-        <div class="text-light col-lg-2 col-sm-12 d-flex justify-content-center nome" *ngIf="this.loginService.isLogged">
-          Olá {{ this.loginService.user[0].nome }}
+        <div class="text-dark col-lg-2 col-sm-12 d-flex justify-content-center nome" *ngIf="this.loginService.isLogged">
+          Olá {{ this.loginService.user.nome }}
         </div>
         <div class="col-lg-4 col-sm-12 d-flex justify-content-center">
           <ul class="list-group list-group-horizontal text-center">
@@ -93,9 +93,6 @@
             Buscar Produto
           </a>
         </li>
-        <a class="nav-item">
-          <img src="../../assets/icon/admin.png" width="45px" height="45px" class="img-fluid">
-        </a>
         <li class="nav-item">
           <a class="nav-link" routerLink="/admin/user-add">
             Cadastrar Usuário

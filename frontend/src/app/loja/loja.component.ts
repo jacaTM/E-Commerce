@@ -27,7 +27,6 @@ export class LojaComponent implements OnInit {
   p: number = 1;
   listaProdutos: Produtos[];
   precoParcelado: number[] = [];
-  currentState: string = 'initial';
   plataforma: string;
   plataformaTitle: string;
 
@@ -51,21 +50,11 @@ export class LojaComponent implements OnInit {
 
     this.produtosService.getProductsByPlataforma(this.plataforma).subscribe(res => {
 
-      for (let i = 0; i < res.length; i++) {
-        res[i].imagem = this.sanitizer.bypassSecurityTrustUrl(res[i].imagem);
-      }
-
-      this.listaProdutos = res;
-      this.plataformaTitle = res[0].plataforma;
+    this.listaProdutos = res;
+    this.plataformaTitle = res[0].plataforma;
 
       for (let i = 0; i < this.listaProdutos.length; i++) {
-        this.precoParcelado.push(this.listaProdutos[i].preco / 3);
-      }
-
-      if (this.currentState = "initial") {
-        setTimeout(() => {
-          this.currentState = 'final';
-        }, 500);
+        this.precoParcelado[i]=this.listaProdutos[i].preco / 10;
       }
     }, err => {
       console.log(err);

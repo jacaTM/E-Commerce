@@ -13,7 +13,7 @@ const routes: Routes = [
    {path: "login", component: LoginComponent},
 
    {
-    path: "loja/:categoria",
+    path: "loja/:plataforma",
     component: LojaComponent,
     runGuardsAndResolvers: 'always'
   },

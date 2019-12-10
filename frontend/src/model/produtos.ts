@@ -5,6 +5,6 @@ export class Produtos {
     preco: number;
     plataforma: string;
     quantidade: number;
-    imagem;
+    imagem: string;
     carrinho: number;
 }
