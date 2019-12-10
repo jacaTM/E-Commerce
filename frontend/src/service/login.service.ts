@@ -18,7 +18,7 @@ const url = "http://localhost:3000";
 export class LoginService {
   isLogged: boolean = false;
   isAdmin: boolean = false;
-  user: User = new User();
+  user: User = new User(null,null,null,null,null,null);
 
   constructor(
     private http: HttpClient,
@@ -29,7 +29,7 @@ export class LoginService {
   userLogout(): void {
     this.isLogged = false;
     this.isAdmin = false;
-    this.user = new User();
+    this.user = new User(null,null,null,null,null,null);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

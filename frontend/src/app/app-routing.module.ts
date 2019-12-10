@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PrincipalComponent } from './principal/principal.component';
 import { LoginComponent } from './login/login.component';
 import { LojaComponent } from './loja/loja.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     component: LojaComponent,
     runGuardsAndResolvers: 'always'
   },
+  {path: "cadastro", component: CadastroComponent}
 
 
 ];
