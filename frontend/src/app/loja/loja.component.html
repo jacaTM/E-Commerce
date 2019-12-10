@@ -1,6 +1,4 @@
 <div class="container p-3" [@animate]="currentState">
-        <h1>{{ plataformaTitle }}</h1>
-      
         <div class="row mt-3 text-center">
           <div class="card border-light text-center col-lg-3 col-md-4 col-sm-6"
             *ngFor="let Produtos of listaProdutos | paginate: { itemsPerPage: 8, currentPage: p }; let i = index ">
@@ -10,12 +8,12 @@
               </a>
             </div>
             <div class="card-body d-flex flex-column">
-              <h4 class="card-title text-info font-weight-bold">{{ Produtos.nome }}</h4>
+              <h4 class="card-title text-dark font-weight-bold">{{ Produtos.nome }}</h4>
               <div class="mt-auto">
-                <h5 class="card-text text-success font-weight-bold">R${{ Produtos.preco.toFixed(2).replace(".", ",") }}
+                <h5 class="card-text text-warning font-weight-bold">R${{ Produtos.preco.toFixed(2).replace(".", ",") }}
                 </h5>
                 <h5 class="card-text">ou até 10x de R${{ precoParcelado[i].toFixed(2).replace(".", ",") }}</h5>
-                <button class="comprar btn btn-outline-success font-weight-bolder text-uppercase"
+                <button class="comprar btn btn-outline-primary font-weight-bolder text-uppercase"
                   routerLink="/loja/{{plataforma}}/{{ Produtos.id }}">Comprar</button>
               </div>
             </div>

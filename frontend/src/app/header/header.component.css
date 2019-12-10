@@ -51,6 +51,10 @@
   background-color: rgb(255, 255, 0);
 }
 
+.clientMenu:hover:nth-child(5) {
+  background-color: rgb(255, 0, 255);
+}
+
 
 .navbar {
   padding-bottom: 0.1%;

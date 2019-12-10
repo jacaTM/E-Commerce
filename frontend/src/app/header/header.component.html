@@ -67,48 +67,15 @@
               Clássicos  
             </a>
           </li>
+          <li class="nav-item clientMenu">
+            <a class="nav-link" routerLink="/loja/windows">
+              <img src="../../assets/img/windows-logo-silhouette.png" class="icones">
+              PC  
+            </a>
+          </li>
       </ul>
     </div>
   </nav>
   
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="this.loginService.isAdmin">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#admin" aria-controls="admin"
-      aria-expanded="false" aria-label="Alterna navegação de Admin">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="admin">
-      <ul class="navbar-nav mx-auto text-center">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/admin/item-add">
-            Adicionar Produtos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/admin/item-list">
-            Listar Produtos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/admin/item-search">
-            Buscar Produto
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/admin/user-add">
-            Cadastrar Usuário
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/admin/user-list">
-            Listar Usuários
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/admin/user-search">
-            Buscar Usuário
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+
   
